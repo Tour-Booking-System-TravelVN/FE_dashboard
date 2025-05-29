@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TravelVN</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/ad_style.css" rel="stylesheet">
+
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="ad_index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Hi, Thu</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Người quản trị</h6>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item d-flex align-items-center" href="ad_users-profile.html"><i class="bi bi-person"></i><span>Thông tin cá nhân</span></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item d-flex align-items-center" href="ad_users-profile.html"><i class="bi bi-gear"></i><span>Cài đặt tài khoản</span></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item d-flex align-items-center" href="#"><i class="bi bi-box-arrow-right"></i><span>Đăng xuất</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item"><a class="nav-link" href="ad_index.html"><i class="bi bi-house"></i><span>Trang chủ</span></a></li>
+      <li class="nav-item"><a class="nav-link active" href="ad_accounts.html"><i class="bi bi-person"></i><span>Quản lý tài khoản</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="ad_tourop.html"><i class="bi bi-person-badge"></i><span>Quản lý người điều hành</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="ad_tour-guides.html"><i class="bi bi-flag"></i><span>Quản lý hướng dẫn viên</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="ad_eval.html"><i class="bi bi-star"></i><span>Duyệt đánh giá</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="ad_customers.html"><i class="bi bi-people"></i><span>Quản lý khách hàng</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="ad_tours.html"><i class="bi bi-map"></i><span>Quản lý Tour</span></a></li>
+    </ul>
+  </aside>
+
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Quản lý tài khoản</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý tài khoản</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Danh sách tài khoản</h5>
+                
+              </div>
+
+              <!-- Search & Filter -->
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm theo tên đăng nhập...">
+                    <button class="btn btn-primary" type="button" onclick="searchAccounts()">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tên đăng nhập</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Trạng thái</th>
+                    <th scope="col">Vai trò</th>
+                    <th scope="col">ID liên kết</th>
+                    <th scope="col">Hành động</th>
+                  </tr>
+                </thead>
+                <tbody id="account-table-body"></tbody>
+              </table>
+
+              <!-- Pagination -->
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div></div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination mb-0" id="pagination"></ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Account Modal -->
+  <div class="modal fade" id="addAccountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm tài khoản mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addAccountForm">
+            <div class="mb-3">
+              <label class="form-label">Tên đăng nhập</label>
+              <input type="text" class="form-control" name="username" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mật khẩu</label>
+              <input type="password" class="form-control" name="password" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Trạng thái</label>
+              <select class="form-select" name="status" required>
+                <option value="ON">ON</option>
+                <option value="OFF">OFF</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Khách hàng (Customer ID)</label>
+              <input type="number" class="form-control" name="customerId" min="1">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Quản trị viên (Administrator ID)</label>
+              <input type="number" class="form-control" name="administratorId" min="1">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Hướng dẫn viên (Tour Guide ID)</label>
+              <input type="number" class="form-control" name="tourGuideId" min="1">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Người điều hành (Tour Operator ID)</label>
+              <input type="number" class="form-control" name="tourOperatorId" min="1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="addAccountForm" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Account Modal -->
+  <div class="modal fade" id="viewAccountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chi tiết tài khoản</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="viewAccountDetails"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Account Modal -->
+  <div class="modal fade" id="editAccountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chỉnh sửa tài khoản</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editAccountForm">
+            <input type="hidden" name="originalUsername">
+            <div class="mb-3">
+              <label class="form-label">Tên đăng nhập</label>
+              <input type="text" class="form-control" name="username" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mật khẩu</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Trạng thái</label>
+              <select class="form-select" name="status" required>
+                <option value="ON">ON</option>
+                <option value="OFF">OFF</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Khách hàng (Customer ID)</label>
+              <input type="number" class="form-control" name="customerId" min="1">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Quản trị viên (Administrator ID)</label>
+              <input type="number" class="form-control" name="administratorId" min="1">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Hướng dẫn viên (Tour Guide ID)</label>
+              <input type="number" class="form-control" name="tourGuideId" min="1">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ID Người điều hành (Tour Operator ID)</label>
+              <input type="number" class="form-control" name="tourOperatorId" min="1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="editAccountForm" class="btn btn-primary">Lưu thay đổi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Account Modal -->
+  <div class="modal fade" id="deleteAccountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Xác nhận xóa tài khoản</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn có chắc chắn muốn xóa tài khoản này?</p>
+          <input type="hidden" id="deleteUsername">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/ad_main.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    axios.defaults.withCredentials = true;
+    let accounts = [];
+    const rowsPerPage = 12;
+    let currentPage = 1;
+    let isLoading = false;
+    const accountCache = {}; // Cache lưu tài khoản theo username
+
+    // Hiển thị trạng thái loading
+    function toggleLoading(show) {
+      const tbody = document.getElementById('account-table-body');
+      isLoading = show
+      if(show){
+        tbody.innerHTML =`<tr><td colspan="10" class="text-center">Đang tải...</td></tr>`;
+      }
+    }
+
+    // Lấy danh sách tài khoản
+    async function fetchAccounts(page = 1) {
+      if (isLoading) return;
+      toggleLoading(true);
+      try {
+        const response = await axios.get('http://localhost:8080/api/user-accounts');
+        accounts = response.data || [];
+        accounts.forEach(account => {
+          accountCache[account.username] = account;
+        });
+        currentPage = page;
+        displayAccounts(currentPage);
+      } catch (error) {
+        console.error('Lỗi khi lấy danh sách:', error);
+        document.getElementById('account-table-body').innerHTML = '<tr><td colspan="7" class="text-center">Không thể tải danh sách tài khoản!</td></tr>';
+      } finally {
+        toggleLoading(false);
+      }
+    }
+
+    // Tìm kiếm tài khoản
+    async function searchAccounts() {
+      const searchTerm = document.getElementById('searchInput').value.trim();
+      if (!searchTerm) {
+        fetchAccounts(1);
+        return;
+      }
+      if (isLoading) return;
+      toggleLoading(true);
+      try {
+        if (accountCache[searchTerm]) {
+          accounts = [accountCache[searchTerm]];
+          currentPage = 1;
+          displayAccounts(currentPage);
+          toggleLoading(false);
+          return;
+        }
+        
+        const response = await axios.get(`http://localhost:8080/api/user-accounts/${encodeURIComponent(searchTerm)}`);
+        const account = response.data;
+        accountCache[searchTerm] = account;
+        accounts = [account];
+        currentPage = 1;
+        displayAccounts(currentPage);
+      } catch (error) {
+        console.error('Lỗi khi tìm kiếm:', error);
+        let errorMsg = error.response?.status === 404 ? `Không tìm thấy tài khoản với username "${searchTerm}"!` : (error.response?.data?.error || 'Không thể tìm kiếm tài khoản!');
+        document.getElementById('account-table-body').innerHTML = `<tr><td colspan="7" class="text-center">${errorMsg}</td></tr>`;
+        accounts = [];
+        renderPagination(0, currentPage);
+      } finally {
+        toggleLoading(false);
+      }
+    }
+
+    // Hiển thị dữ liệu lên bảng
+    function displayAccounts(page) {
+      const tbody = document.getElementById('account-table-body');
+      tbody.innerHTML = '';
+
+      const start = (page - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const paginatedAccounts = accounts.slice(start, end);
+
+      if (!paginatedAccounts || paginatedAccounts.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" class="text-center">Không có tài khoản nào!</td></tr>';
+        renderPagination(0, page);
+        return;
+      }
+
+      paginatedAccounts.forEach((account, index) => {
+        const role = account.customerId ? 'Khách hàng' : 
+                     account.administratorId ? 'Quản trị viên' : 
+                     account.tourGuideId ? 'Hướng dẫn viên' : 
+                     account.tourOperatorId ? 'Người điều hành' : 'Không có vai trò';
+        const entityId = account.customerId || account.administratorId || account.tourGuideId || account.tourOperatorId || 'N/A';
+        const row = `
+          <tr>
+            <td>${start + index + 1}</td>
+            <td>${account.username || 'N/A'}</td>
+            <td>${account.email || 'N/A'}</td>
+            <td>${account.status === 'ON' ? '<span class="badge bg-success">ON</span>' : '<span class="badge bg-warning">OFF</span>'}</td>
+            <td>${role}</td>
+            <td>${entityId}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm" title="Xem" data-bs-toggle="modal" data-bs-target="#viewAccountModal" onclick="viewAccount('${account.username}')">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button type="button" class="btn btn-warning btn-sm" title="Sửa" data-bs-toggle="modal" data-bs-target="#editAccountModal" onclick="editAccount('${account.username}')">
+                <i class="bi bi-pencil"></i>
+              </button>
+             
+            </td>
+          </tr>`;
+        tbody.insertAdjacentHTML('beforeend', row);
+      });
+
+      renderPagination(accounts.length, page);
+    }
+
+    // Render phân trang
+    function renderPagination(totalRows, activePage) {
+      const totalPages = Math.ceil(totalRows / rowsPerPage);
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      if (totalRows === 0) return;
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === 1 ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage - 1})">«</a>
+        </li>`;
+
+      for (let i = 1; i <= totalPages; i++) {
+        pagination.innerHTML += `
+          <li class="page-item ${i === activePage ? 'active' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+          </li>`;
+      }
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === totalPages ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage + 1})">»</a>
+        </li>`;
+    }
+
+    // Chuyển trang
+    window.changePage = function(page) {
+      if (page < 1 || page > Math.ceil(accounts.length / rowsPerPage) || isLoading) return;
+      currentPage = page;
+      displayAccounts(currentPage);
+    };
+
+    // Xem chi tiết tài khoản
+    async function viewAccount(username) {
+      try {
+        let account = accountCache[username] || (await axios.get(`http://localhost:8080/api/user-accounts/${username}`)).data;
+        accountCache[username] = account;
+        const role = account.customerId ? 'Khách hàng' : 
+                     account.administratorId ? 'Quản trị viên' : 
+                     account.tourGuideId ? 'Hướng dẫn viên' : 
+                     account.tourOperatorId ? 'Người điều hành' : 'Không có vai trò';
+        const entityId = account.customerId || account.administratorId || account.tourGuideId || account.tourOperatorId || 'N/A';
+        document.getElementById('viewAccountDetails').innerHTML = `
+          <div class="mb-3"><strong>Tên đăng nhập:</strong> ${account.username || 'N/A'}</div>
+          <div class="mb-3"><strong>Email:</strong> ${account.email || 'N/A'}</div>
+          <div class="mb-3"><strong>Trạng thái:</strong> ${account.status === 'ON' ? 'ON' : 'OFF'}</div>
+          <div class="mb-3"><strong>Vai trò:</strong> ${role}</div>
+          <div class="mb-3"><strong>ID liên kết:</strong> ${entityId}</div>
+        `;
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Tài khoản không tồn tại!' : (error.response?.data?.error || 'Không thể lấy thông tin tài khoản!'));
+      }
+    }
+
+    // Chuẩn bị chỉnh sửa tài khoản
+    async function editAccount(username) {
+      try {
+        let account = accountCache[username] || (await axios.get(`http://localhost:8080/api/user-accounts/${username}`)).data;
+        accountCache[username] = account;
+        const form = document.getElementById('editAccountForm');
+        form.originalUsername.value = account.username || '';
+        form.username.value = account.username || '';
+        form.email.value = account.email || '';
+        form.status.value = account.status || 'OFF';
+        form.customerId.value = account.customerId || '';
+        form.administratorId.value = account.administratorId || '';
+        form.tourGuideId.value = account.tourGuideId || '';
+        form.tourOperatorId.value = account.tourOperatorId || '';
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Tài khoản không tồn tại!' : (error.response?.data?.error || 'Không thể lấy thông tin tài khoản!'));
+      }
+    }
+
+    // Chuẩn bị xóa tài khoản
+    function prepareDelete(username) {
+      document.getElementById('deleteUsername').value = username;
+    }
+
+    // Xóa tài khoản
+    document.getElementById('confirmDeleteBtn').addEventListener('click', async () => {
+      const username = document.getElementById('deleteUsername').value;
+      try {
+        await axios.delete(`http://localhost:8080/api/user-accounts/${username}`);
+        alert('Xóa tài khoản thành công!');
+        delete accountCache[username];
+        fetchAccounts(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('deleteAccountModal')).hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Tài khoản không tồn tại!' : (error.response?.data?.error || 'Không thể xóa tài khoản!'));
+      }
+    });
+
+    // Validate ID fields (ensure only one ID is provided)
+    function validateIds(form) {
+      const ids = [
+        form.customerId.value,
+        form.administratorId.value,
+        form.tourGuideId.value,
+        form.tourOperatorId.value
+      ].filter(id => id && id.trim() !== '');
+      if (ids.length > 1) {
+        alert('Chỉ được phép nhập một loại ID (Customer, Administrator, Tour Guide, hoặc Tour Operator)!');
+        return false;
+      }
+      return true;
+    }
+
+    // Thêm tài khoản
+    document.getElementById('addAccountForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      if (!form.username.value || !form.email.value || !form.status.value) {
+        alert('Vui lòng điền đầy đủ các trường bắt buộc (Tên đăng nhập, Email, Trạng thái)!');
+        return;
+      }
+      if (!/^\S+@\S+\.\S+$/.test(form.email.value)) {
+        alert('Email không hợp lệ!');
+        return;
+      }
+      if (!validateIds(form)) return;
+
+      const data = {
+        username: form.username.value,
+        password: form.password.value || null,
+        email: form.email.value,
+        status: form.status.value,
+        customerId: form.customerId.value ? parseInt(form.customerId.value) : null,
+        administratorId: form.administratorId.value ? parseInt(form.administratorId.value) : null,
+        tourGuideId: form.tourGuideId.value ? parseInt(form.tourGuideId.value) : null,
+        tourOperatorId: form.tourOperatorId.value ? parseInt(form.tourOperatorId.value) : null
+      };
+
+      try {
+        const response = await axios.post('http://localhost:8080/api/user-accounts', data);
+        alert('Thêm tài khoản thành công!');
+        accountCache[data.username] = response.data;
+        form.reset();
+        fetchAccounts(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('addAccountModal')).hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        const errorMsg = error.response?.status === 400 && error.response.data.error ? 
+                         error.response.data.error : 
+                         (error.response?.data?.message || 'Không thể thêm tài khoản! Vui lòng kiểm tra dữ liệu.');
+        alert(errorMsg);
+      }
+    });
+
+    // Sửa tài khoản
+    document.getElementById('editAccountForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      if (!form.email.value || !form.status.value) {
+        alert('Email và Trạng thái là bắt buộc!');
+        return;
+      }
+      if (!/^\S+@\S+\.\S+$/.test(form.email.value)) {
+        alert('Email không hợp lệ!');
+        return;
+      }
+      if (!validateIds(form)) return;
+
+      const originalUsername = form.originalUsername.value;
+      const data = {
+        username: form.username.value,
+        password: form.password.value || null,
+        email: form.email.value,
+        status: form.status.value,
+        customerId: form.customerId.value ? parseInt(form.customerId.value) : null,
+        administratorId: form.administratorId.value ? parseInt(form.administratorId.value) : null,
+        tourGuideId: form.tourGuideId.value ? parseInt(form.tourGuideId.value) : null,
+        tourOperatorId: form.tourOperatorId.value ? parseInt(form.tourOperatorId.value) : null
+      };
+
+      try {
+        const response = await axios.put(`http://localhost:8080/api/user-accounts/${originalUsername}`, data);
+        alert('Cập nhật tài khoản thành công!');
+        accountCache[originalUsername] = response.data;
+        if (data.username !== originalUsername) {
+          delete accountCache[originalUsername];
+          accountCache[data.username] = response.data;
+        }
+        fetchAccounts(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('editAccountModal')).hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        const errorMsg = error.response?.status === 404 ? 'Tài khoản không tồn tại!' : 
+                         (error.response?.data?.error || error.response?.data?.message || 'Không thể cập nhật tài khoản!');
+        alert(errorMsg);
+      }
+    });
+
+    // Tìm kiếm khi nhấn Enter
+    document.getElementById('searchInput').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        searchAccounts();
+      }
+    });
+
+    // Khởi động
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchAccounts(1);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TravelVN</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/ad_style.css" rel="stylesheet">
+
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="ad_index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Hi, Thu</span>
+          </a><!-- End Profile Iamge Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Người quản trị</h6>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="ad_users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Thông tin cá nhân</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="ad_users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Cài đặt tài khoản</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Đăng xuất</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="ad_index.html">
+          <i class="bi bi-house"></i>
+          <span>Trang chủ</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ad_accounts.html">
+          <i class="bi bi-person"></i>
+          <span>Quản lý tài khoản</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ad_tourop.html">
+          <i class="bi bi-person-badge"></i>
+          <span>Quản lý người điều hành</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ad_tour-guides.html">
+          <i class="bi bi-flag"></i>
+          <span>Quản lý hướng dẫn viên</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ad_eval.html">
+          <i class="bi bi-star"></i>
+          <span>Duyệt đánh giá</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="ad_customers.html">
+          <i class="bi bi-people"></i>
+          <span>Quản lý khách hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ad_tours.html">
+          <i class="bi bi-map"></i>
+          <span>Quản lý Tour</span>
+        </a>
+      </li>
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <!-- ======= Main ======= -->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Quản lý khách hàng</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="ad_index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý khách hàng</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Danh sách khách hàng</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+                  <i class="bi bi-plus-circle"></i> Thêm khách hàng mới
+                </button>
+              </div>
+
+              <!-- Search & Filter -->
+              <div class="row mb-3">
+                <div class="col-md-3">
+                  <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm khách hàng...">
+                    <button class="btn btn-primary" type="button" onclick="searchCustomers()">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Ngày sinh</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">CMND/CCCD</th>
+                    <th scope="col">Hộ chiếu</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Địa chỉ</th>
+                    <th scope="col">Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="customer-table-body">
+                  <!-- Dữ liệu sẽ được điền bằng JavaScript -->
+                </tbody>
+              </table>
+
+              <!-- Pagination -->
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div></div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination mb-0" id="pagination"></ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Customer Modal -->
+  <div class="modal fade" id="addCustomerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm khách hàng mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addCustomerForm">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Họ</label>
+                <input type="text" class="form-control" name="firstname" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Tên</label>
+                <input type="text" class="form-control" name="lastname" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Ngày sinh</label>
+                <input type="date" class="form-control" name="dateOfBirth" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Giới tính</label>
+                <select class="form-select" name="gender" required>
+                  <option value="true">Nam</option>
+                  <option value="false">Nữ</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">CMND/CCCD</label>
+                <input type="text" class="form-control" name="citizenId" maxlength="12">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Hộ chiếu</label>
+                <input type="text" class="form-control" name="passport" maxlength="9">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-control" name="phoneNumber" maxlength="10">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Quốc tịch</label>
+                <input type="text" class="form-control" name="nationality">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Địa chỉ</label>
+              <textarea class="form-control" name="address" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Ghi chú</label>
+              <textarea class="form-control" name="note" rows="2"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="addCustomerForm" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Customer Modal -->
+  <div class="modal fade" id="viewCustomerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chi tiết khách hàng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="viewCustomerDetails">
+          <!-- Dữ liệu sẽ được điền bằng JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Customer Modal -->
+  <div class="modal fade" id="editCustomerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chỉnh sửa thông tin khách hàng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editCustomerForm">
+            <input type="hidden" name="id">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Họ</label>
+                <input type="text" class="form-control" name="firstname" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Tên</label>
+                <input type="text" class="form-control" name="lastname" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Ngày sinh</label>
+                <input type="date" class="form-control" name="dateOfBirth" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Giới tính</label>
+                <select class="form-select" name="gender" required>
+                  <option value="true">Nam</option>
+                  <option value="false">Nữ</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">CMND/CCCD</label>
+                <input type="text" class="form-control" name="citizenId" maxlength="12">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Hộ chiếu</label>
+                <input type="text" class="form-control" name="passport" maxlength="9">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-control" name="phoneNumber" maxlength="10">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Quốc tịch</label>
+                <input type="text" class="form-control" name="nationality">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Địa chỉ</label>
+              <textarea class="form-control" name="address" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Ghi chú</label>
+              <textarea class="form-control" name="note" rows="2"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+              <button type="submit" form="editCustomerForm" class="btn btn-primary">Lưu thay đổi</button>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Customer Modal -->
+  <div class="modal fade" id="deleteCustomerModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Xác nhận xóa khách hàng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn có chắc chắn muốn xóa khách hàng này?</p>
+          <input type="hidden" id="deleteCustomerId">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/ad_main.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    axios.defaults.withCredentials = true;
+    let customers = [];
+    const rowsPerPage = 12;
+    let currentPage = 1;
+    let isLoading = false;
+    const customerCache = {}; // Cache lưu khách hàng theo ID
+
+    // Hiển thị trạng thái loading
+    function toggleLoading(show) {
+  isLoading = show;
+  const tbody = document.getElementById('customer-table-body');
+  if (!tbody) {
+    console.error('Không tìm thấy #customer-table-body trong DOM!');
+    return;
+  }
+  if (show) {
+    // Khi đang tải, hiển thị spinner
+    tbody.innerHTML = '<tr><td colspan="9" class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Đang tải...</span></div></td></tr>';
+  }
+  // Nếu show === false, không can thiệp, vì displayCustomers sẽ ghi đè nội dung.
+}
+
+
+    // Lấy danh sách khách hàng
+    async function fetchCustomers(page = 1) {
+  console.log('Bắt đầu lấy danh sách khách hàng, trang:', page);
+  if (isLoading) return;
+  toggleLoading(true);
+  try {
+    const response = await axios.get('http://localhost:8080/api/customers');
+    console.log('Danh sách khách hàng nhận được:', response.data);
+    customers = response.data || [];
+    customers.forEach((customer) => {
+      customerCache[customer.id] = customer;
+    });
+    currentPage = page;
+  } catch (error) {
+    console.error('Lỗi khi lấy danh sách khách hàng:', error);
+    const errorMsg = error.message.includes('Network Error')
+      ? 'Không thể kết nối đến backend! Vui lòng kiểm tra server.'
+      : 'Không thể tải danh sách khách hàng!';
+    document.getElementById('customer-table-body').innerHTML =
+      `<tr><td colspan="9" class="text-center">${errorMsg}</td></tr>`;
+  } finally {
+    // Đầu tiên tắt spinner, sau đó hiện dữ liệu
+    toggleLoading(false);
+    displayCustomers(currentPage);
+  }
+}
+
+
+// Tìm kiếm khách hàng
+async function searchCustomers() {
+  const searchTerm = document.getElementById('searchInput').value.trim();
+  console.log('Tìm kiếm với từ khóa:', searchTerm);
+
+  // Kiểm tra searchTerm
+  if (!searchTerm) {
+    document.getElementById('customer-table-body').innerHTML = 
+      `<tr><td colspan="9" class="text-center text-danger">Vui lòng nhập tên khách hàng để tìm kiếm!</td></tr>`;
+    fetchCustomers(1); // Tải lại danh sách mặc định
+    renderPagination(0, 1);
+    return;
+  }
+
+  // Kiểm tra độ dài searchTerm (tối đa 50 ký tự để tránh yêu cầu không hợp lý)
+  if (searchTerm.length > 50) {
+    document.getElementById('customer-table-body').innerHTML = 
+      `<tr><td colspan="9" class="text-center text-danger">Từ khóa tìm kiếm không được vượt quá 50 ký tự!</td></tr>`;
+    customers = [];
+    renderPagination(0, 1);
+    return;
+  }
+
+  if (isLoading) return;
+  toggleLoading(true);
+
+  try {
+    const url = `http://localhost:8080/api/customers/search?name=${encodeURIComponent(searchTerm)}`;
+    console.log('Gửi yêu cầu API:', url);
+    const response = await axios.get(url);
+    console.log('Kết quả tìm kiếm:', response.data);
+    
+    customers = response.data || [];
+    if (customers.length === 0) {
+      // Hiển thị thông báo nếu không tìm thấy khách hàng
+      document.getElementById('customer-table-body').innerHTML = 
+        `<tr><td colspan="9" class="text-center text-muted">Không tìm thấy khách hàng với tên "${searchTerm}"!</td></tr>`;
+      renderPagination(0, 1);
+    } else {
+      // Lưu vào cache và hiển thị kết quả
+      customers.forEach((customer) => {
+        customerCache[customer.id] = customer;
+      });
+      currentPage = 1;
+      displayCustomers(currentPage);
+      renderPagination(customers.length, currentPage);
+    }
+  } catch (error) {
+    console.error('Lỗi khi tìm kiếm:', error);
+    let errorMsg = 'Không thể tìm kiếm khách hàng!';
+    if (error.response?.data?.message) {
+      errorMsg = error.response.data.message;
+    } else if (error.message.includes('Network Error')) {
+      errorMsg = 'Không thể kết nối đến backend! Vui lòng kiểm tra server.';
+    }
+    document.getElementById('customer-table-body').innerHTML = 
+      `<tr><td colspan="9" class="text-center text-danger">${errorMsg}</td></tr>`;
+    customers = [];
+    renderPagination(0, currentPage);
+  } finally {
+    toggleLoading(false);
+  }
+}
+
+    // Hiển thị dữ liệu lên bảng
+    function displayCustomers(page) {
+      console.log('Hiển thị trang:', page, 'Dữ liệu:', customers);
+      const tbody = document.getElementById('customer-table-body');
+      if (!tbody) {
+        console.error('Không tìm thấy #customer-table-body trong DOM!');
+        return;
+      }
+      tbody.innerHTML = '';
+
+      const start = (page - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const paginatedCustomers = customers.slice(start, end);
+
+      if (!paginatedCustomers || paginatedCustomers.length === 0) {
+        console.log('Không có khách hàng để hiển thị');
+        tbody.innerHTML = '<tr><td colspan="9" class="text-center">Không có khách hàng nào!</td></tr>';
+        renderPagination(0, page);
+        return;
+      }
+
+      paginatedCustomers.forEach((customer, index) => {
+        const fullName = `${customer.firstname || ''} ${customer.lastname || ''}`.trim() || 'N/A';
+        const genderText = customer.gender === true ? 'Nam' : customer.gender === false ? 'Nữ' : 'N/A';
+        const row = `
+          <tr>
+            <td>${start + index + 1}</td>
+            <td>${fullName}</td>
+            <td>${customer.dateOfBirth || 'N/A'}</td>
+            <td>${genderText}</td>
+            <td>${customer.citizenId}</td>
+            <td>${customer.passport || 'N/A'}</td>
+            <td>${customer.phoneNumber || 'N/A'}</td>
+            <td>${customer.address || 'N/A'}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm" title="Xem" data-bs-toggle="modal" data-bs-target="#viewCustomerModal" onclick="viewCustomer(${customer.id})">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button type="button" class="btn btn-warning btn-sm" title="Sửa" data-bs-toggle="modal" data-bs-target="#editCustomerModal" onclick="editCustomer(${customer.id})">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button type="button" class="btn btn-danger btn-sm" title="Xóa" data-bs-toggle="modal" data-bs-target="#deleteCustomerModal" onclick="prepareDelete(${customer.id})">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>`;
+        tbody.insertAdjacentHTML('beforeend', row);
+      });
+
+      renderPagination(customers.length, page);
+    }
+
+    // Render phân trang
+    function renderPagination(totalRows, activePage) {
+      console.log('Render phân trang:', totalRows, activePage);
+      const totalPages = Math.ceil(totalRows / rowsPerPage);
+      const pagination = document.getElementById('pagination');
+      if (!pagination) {
+        console.error('Không tìm thấy #pagination trong DOM!');
+        return;
+      }
+      pagination.innerHTML = '';
+
+      if (totalRows === 0) return;
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === 1 ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage - 1})">«</a>
+        </li>`;
+
+      for (let i = 1; i <= totalPages; i++) {
+        pagination.innerHTML += `
+          <li class="page-item ${i === activePage ? 'active' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+          </li>`;
+      }
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === totalPages ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage + 1})">»</a>
+        </li>`;
+    }
+
+    // Chuyển trang
+    window.changePage = function (page) {
+      console.log('Chuyển đến trang:', page);
+      if (page < 1 || page > Math.ceil(customers.length / rowsPerPage) || isLoading) return;
+      currentPage = page;
+      displayCustomers(currentPage);
+    };
+
+    // Xem chi tiết khách hàng
+    async function viewCustomer(id) {
+  console.log('Xem chi tiết khách hàng:', id);
+  try {
+    let customer = customerCache[id];
+    if (!customer) {
+      const response = await axios.get(`http://localhost:8080/api/customers/${id}`);
+      console.log('Chi tiết khách hàng:', response.data);
+      customer = response.data;
+      customerCache[id] = customer;
+    }
+    const fullName = `${customer.firstname || ''} ${customer.lastname || ''}`.trim() || 'N/A';
+    const genderText = customer.gender === true ? 'Nam' : customer.gender === false ? 'Nữ' : 'N/A';
+    document.getElementById('viewCustomerDetails').innerHTML = `
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>Họ và tên:</strong> ${fullName}</p>
+          <p><strong>Ngày sinh:</strong> ${customer.dateOfBirth || 'N/A'}</p>
+          <p><strong>Giới tính:</strong> ${genderText}</p>
+          <p><strong>CMND/CCCD:</strong> ${customer.citizenId || 'N/A'}</p>
+          <p><strong>Hộ chiếu:</strong> ${customer.passport || 'N/A'}</p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Số điện thoại:</strong> ${customer.phoneNumber || 'N/A'}</p>
+          <p><strong>Quốc tịch:</strong> ${customer.nationality || 'N/A'}</p>
+          <p><strong>Địa chỉ:</strong> ${customer.address || 'N/A'}</p>
+          <p><strong>Ghi chú:</strong> ${customer.note || 'N/A'}</p>
+        </div>
+      </div>`;
+  } catch (error) {
+    console.error('Lỗi khi xem khách hàng:', error);
+    alert(
+      error.response?.status === 404
+        ? 'Khách hàng không tồn tại!'
+        : error.response?.data?.message || 'Không thể lấy thông tin khách hàng!'
+    );
+  }
+}
+
+
+    // Chuẩn bị chỉnh sửa khách hàng
+    async function editCustomer(id) {
+      console.log('Chuẩn bị chỉnh sửa khách hàng:', id);
+      try {
+        let customer = customerCache[id];
+        if (!customer) {
+          const response = await axios.get(`http://localhost:8080/api/customers/${id}`);
+          console.log('Dữ liệu để sửa:', response.data);
+          customer = response.data;
+          customerCache[id] = customer;
+        }
+        const form = document.getElementById('editCustomerForm');
+        form.id.value = customer.id || '';
+        form.firstname.value = customer.firstname || '';
+        form.lastname.value = customer.lastname || '';
+        form.dateOfBirth.value = customer.dateOfBirth || '';
+        form.gender.value = customer.gender !== null ? customer.gender : '';
+        form.citizenId.value = customer.citizenId || '';
+        form.passport.value = customer.passport || '';
+        form.phoneNumber.value = customer.phoneNumber || '';
+        form.nationality.value = customer.nationality || '';
+        form.address.value = customer.address || '';
+        form.note.value = customer.note || '';
+      } catch (error) {
+        console.error('Lỗi khi chuẩn bị chỉnh sửa:', error);
+        alert(
+          error.response?.status === 404
+            ? 'Khách hàng không tồn tại!'
+            : error.response?.data?.message || 'Không thể lấy thông tin khách hàng!'
+        );
+      }
+    }
+
+    // Chuẩn bị xóa khách hàng
+    function prepareDelete(id) {
+      console.log('Chuẩn bị xóa khách hàng:', id);
+      document.getElementById('deleteCustomerId').value = id;
+    }
+
+    // Xóa khách hàng
+    document.getElementById('confirmDeleteBtn').addEventListener('click', async () => {
+      const id = document.getElementById('deleteCustomerId').value;
+      console.log('Xác nhận xóa khách hàng:', id);
+      try {
+        await axios.delete(`http://localhost:8080/api/customers/${id}`);
+        alert('Xóa khách hàng thành công!');
+        delete customerCache[id];
+        fetchCustomers(currentPage);
+        document.getElementById('deleteCustomerModal').classList.remove('show');
+        document.querySelector('.modal-backdrop')?.remove();
+      } catch (error) {
+        console.error('Lỗi khi xóa khách hàng:', error);
+        alert(
+          error.response?.status === 404
+            ? 'Khách hàng không tồn tại!'
+            : error.response?.data?.message || 'Không thể xóa khách hàng!'
+        );
+      }
+    });
+
+    // Thêm khách hàng
+    document.getElementById('addCustomerForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      if (!form.firstname.value || !form.lastname.value || !form.dateOfBirth.value) {
+        alert('Vui lòng điền đầy đủ các trường bắt buộc (Họ, Tên, Ngày sinh)!');
+        return;
+      }
+      const data = {
+        firstname: form.firstname.value,
+        lastname: form.lastname.value,
+        dateOfBirth: form.dateOfBirth.value,
+        gender: parseInt(form.gender.value),
+        citizenId: form.citizenId.value ,
+        passport: form.passport.value ,
+        phoneNumber: form.phoneNumber.value ,
+        nationality: form.nationality.value ,
+        address: form.address.value ,
+        note: form.note.value || null,
+      };
+      console.log('Thêm khách hàng mới:', data);
+      try {
+        const response = await axios.post('http://localhost:8080/api/customers', data);
+        alert('Thêm khách hàng thành công!');
+        customerCache[response.data.id] = response.data;
+        form.reset();
+        fetchCustomers(currentPage);
+        document.getElementById('addCustomerModal').classList.remove('show');
+        document.querySelector('.modal-backdrop')?.remove();
+      } catch (error) {
+        console.error('Lỗi khi thêm khách hàng:', error);
+        const errorMsg =
+          error.response?.data?.message ||
+          error.response?.data?.errors?.join(', ') ||
+          'Không thể thêm khách hàng! Vui lòng kiểm tra dữ liệu.';
+        alert(errorMsg);
+      }
+    });
+
+    // Sửa khách hàng
+    document.getElementById('editCustomerForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      if (!form.firstname.value || !form.lastname.value || !form.dateOfBirth.value) {
+        alert('Vui lòng điền đầy đủ các trường bắt buộc (Họ, Tên, Ngày sinh)!');
+        return;
+      }
+      const data = {
+        id: form.id.value,
+        firstname: form.firstname.value,
+        lastname: form.lastname.value,
+        dateOfBirth: form.dateOfBirth.value,
+        gender: parseInt(form.gender.value),
+        citizenId: form.citizenId.value ,
+        passport: form.passport.value ,
+        phoneNumber: form.phoneNumber.value ,
+        nationality: form.nationality.value ,
+        address: form.address.value ,
+        note: form.note.value || null,
+      };
+      console.log('Cập nhật khách hàng:', data);
+      try {
+        const response = await axios.put(`http://localhost:8080/api/customers/${data.id}`, data);
+        alert('Cập nhật khách hàng thành công!');
+        customerCache[data.id] = response.data;
+        fetchCustomers(currentPage);
+        document.getElementById('editCustomerModal').classList.remove('show');
+        document.querySelector('.modal-backdrop')?.remove();
+      } catch (error) {
+        console.error('Lỗi khi cập nhật khách hàng:', error);
+        const errorMsg =
+          error.response?.status === 404
+            ? 'Khách hàng không tồn tại!'
+            : error.response?.data?.message ||
+              error.response?.data?.errors?.join(', ') ||
+              'Không thể cập nhật khách hàng!';
+        alert(errorMsg);
+      }
+    });
+
+    // Tìm kiếm khi nhấn Enter
+    document.getElementById('searchInput').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        console.log('Nhấn Enter để tìm kiếm');
+        searchCustomers();
+      }
+    });
+
+    // Gọi fetchCustomers khi trang tải
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Trang đã tải, gọi fetchCustomers');
+      fetchCustomers(1);
+    });
+
+  </script>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dobInputs = document.querySelectorAll("input[name='dob']");
+    const today = new Date().toISOString().split("T")[0];
+
+    dobInputs.forEach((dobInput) => {
+      // Giới hạn không chọn ngày trong tương lai
+      dobInput.max = today;
+
+      // Cảnh báo nếu người dùng chọn sai
+      dobInput.addEventListener("input", () => {
+        if (dobInput.value > today) {
+          dobInput.setCustomValidity("Ngày sinh phải trước hôm nay.");
+        } else {
+          dobInput.setCustomValidity("");
+        }
+      });
+    });
+  });
+</script>
+
+</html>

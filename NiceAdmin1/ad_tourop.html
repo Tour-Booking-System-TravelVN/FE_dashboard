@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TravelVN</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/ad_style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="ad_index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+          </ul><!-- End Notification Dropdown Items -->
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+          </ul><!-- End Messages Dropdown Items -->
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Hi, Thu</span>
+          </a><!-- End Profile Image Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Người quản trị</h6>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="ad_users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Thông tin cá nhân</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="ad_users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Cài đặt tài khoản</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Đăng xuất</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link " href="ad_index.html">
+          <i class="bi bi-house"></i>
+          <span>Trang chủ</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="ad_accounts.html">
+          <i class="bi bi-person"></i>
+          <span>Quản lý tài khoản</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="ad_tourop.html">
+          <i class="bi bi-person-badge"></i>
+          <span>Quản lý người điều hành</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="ad_tour-guides.html">
+          <i class="bi bi-flag"></i>
+          <span>Quản lý hướng dẫn viên</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="ad_eval.html">
+          <i class="bi bi-star"></i>
+          <span>Duyệt đánh giá</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="ad_customers.html">
+          <i class="bi bi-people"></i>
+          <span>Quản lý khách hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ad_tours.html">
+          <i class="bi bi-map"></i>
+          <span>Quản lý Tour</span>
+        </a>
+      </li>
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <!-- ======= Main ======= -->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Quản lý người điều hành</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý người điều hành</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Danh sách người điều hành</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTOModal">
+                  <i class="bi bi-plus-circle"></i> Thêm người điều hành mới
+                </button>
+              </div>
+
+              <!-- Search & Filter -->
+              <div class="row mb-3">
+                <div class="col-md-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="searchTOInput" placeholder="Tìm kiếm theo mã...">
+                    <button class="btn btn-primary" type="button" onclick="searchTourOperators()">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <!-- Có thể thêm bộ lọc nếu cần -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Mã</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Ngày sinh</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">CCCD</th>
+                    <th scope="col">Địa chỉ</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Quê quán</th>
+                    <th scope="col">Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="to-table-body">
+                  <!-- Dữ liệu sẽ được thêm động bởi JavaScript -->
+                </tbody>
+              </table>
+
+              <!-- Pagination -->
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div></div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination mb-0" id="pagination">
+                    <!-- JavaScript sẽ tạo pagination ở đây -->
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add TO Modal -->
+  <div class="modal fade" id="addTOModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm người điều hành mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addTOForm">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Họ</label>
+                <input type="text" class="form-control" name="firstname" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Tên</label>
+                <input type="text" class="form-control" name="lastname" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Ngày sinh</label>
+                <input type="date" class="form-control" name="dateOfBirth" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Giới tính</label>
+                <select class="form-select" name="gender" required>
+                  <option value="true">Nam</option>
+                  <option value="false">Nữ</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-control" name="phoneNumber" maxlength="10">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">CCCD</label>
+                <input type="text" class="form-control" name="citizenId">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Lương</label>
+                <input type="number" class="form-control" name="salary">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Ngày bắt đầu</label>
+                <input type="date" class="form-control" name="startDate">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Ngày kết thúc</label>
+                <input type="date" class="form-control" name="endDate">
+              </div>
+        
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Địa chỉ</label>
+              <textarea class="form-control" name="address" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Quê quán</label>
+              <textarea class="form-control" name="hometown" rows="2"></textarea>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="addTOForm" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View TO Modal -->
+  <div class="modal fade" id="viewTOModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chi tiết người điều hành</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Mã người điều hành: </strong><span id="viewTOId"></span></p>
+              <p><strong>Họ và tên: </strong><span id="viewTOFullname"></span></p>
+              <p><strong>Ngày sinh: </strong><span id="viewTODateOfBirth"></span></p>
+              <p><strong>Giới tính: </strong><span id="viewTOGender"></span></p>
+              <p><strong>CCCD: </strong><span id="viewTOCitizenId"></span></p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Số điện thoại: </strong><span id="viewTOPhoneNumber"></span></p>
+              <p><strong>Địa chỉ: </strong><span id="viewTOAddress"></span></p>
+              <p><strong>Quê quán: </strong><span id="viewTOHometown"></span></p>
+              <p><strong>Lương: </strong><span id="viewTOSalary"></span></p>
+  
+              <p><strong>Ngày bắt đầu: </strong><span id="viewTOStartDate"></span></p>
+              <p><strong>Ngày kết thúc: </strong><span id="viewTOEndDate"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit TO Modal -->
+  <div class="modal fade" id="editTOModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chỉnh sửa thông tin người điều hành</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editTOForm">
+            <input type="hidden" name="id" id="editTOId">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Họ</label>
+                <input type="text" class="form-control" name="firstname" id="editTOFirstname" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Tên</label>
+                <input type="text" class="form-control" name="lastname" id="editTOLastname" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Ngày sinh</label>
+                <input type="date" class="form-control" name="dateOfBirth" id="editTODateOfBirth" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Giới tính</label>
+                <select class="form-select" name="gender" id="editTOGender" required>
+                  <option value="true">Nam</option>
+                  <option value="false">Nữ</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-control" name="phoneNumber" id="editTOPhoneNumber" maxlength="10">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">CCCD</label>
+                <input type="text" class="form-control" name="citizenId" id="editTOCitizenId">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Lương</label>
+                <input type="number" class="form-control" name="salary" id="editTOSalary">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Ngày bắt đầu</label>
+                <input type="date" class="form-control" name="startDate" id="editTOStartDate">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Ngày kết thúc</label>
+                <input type="date" class="form-control" name="endDate" id="editTOEndDate">
+              </div>
+            
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Địa chỉ</label>
+              <textarea class="form-control" name="address" id="editTOAddress" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Quê quán</label>
+              <textarea class="form-control" name="hometown" id="editTOHometown" rows="2"></textarea>
+            </div>
+           
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="editTOForm" class="btn btn-primary">Lưu thay đổi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete TO Modal -->
+  <div class="modal fade" id="deleteTOModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Xác nhận xóa người điều hành</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn có chắc chắn muốn xóa người điều hành <strong id="deleteTOName"></strong>?</p>
+          <p class="text-danger">Lưu ý: Hành động này không thể hoàn tác.</p>
+          <input type="hidden" id="deleteTOId">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+
+  <!-- Axios for API calls -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/ad_main.js"></script>
+
+  <!-- JavaScript Logic -->
+<script>
+  // Global variables / Biến toàn cục
+  axios.defaults.withCredentials = true;
+const rowsPerPage = 12;
+let currentPage = 1;
+let tourOperators = [];
+let filteredTourOperators = [];
+
+// toggleLoading: Hiển thị hoặc ẩn loading spinner
+// English: Show or hide the loading spinner
+function toggleLoading(show) {
+  const loadingIndicator = document.getElementById('loadingIndicator');
+  if (!loadingIndicator) {
+    console.error('Không tìm thấy phần tử loadingIndicator! / Loading indicator element not found!');
+    return;
+  }
+  loadingIndicator.style.display = show ? 'block' : 'none';
+}
+
+// displayTourOperators: Hiển thị dữ liệu lên bảng cho trang hiện tại
+// English: Render the tour operators' data into the table for the current page.
+function displayTourOperators(page, operatorList) {
+  const start = (page - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
+  const paginatedOperators = operatorList.slice(start, end);
+
+  const tbody = document.getElementById('to-table-body');
+  tbody.innerHTML = ''; // Xóa nội dung cũ / Clear previous content
+
+  if (paginatedOperators.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="9" class="text-center">Không có người điều hành nào! / No tour operators available!</td></tr>';
+  } else {
+    paginatedOperators.forEach(operator => {
+      const row = `
+        <tr>
+          <td>${operator.id}</td>
+          <td>${operator.firstname} ${operator.lastname}</td>
+          <td>${new Date(operator.dateOfBirth).toLocaleDateString('vi-VN')}</td>
+          <td>${operator.gender ? 'Nam' : 'Nữ'}</td>
+          <td>${operator.citizenId || ''}</td>
+          <td>${operator.address || ''}</td>
+          <td>${operator.phoneNumber || ''}</td>
+          <td>${operator.hometown || ''}</td>
+          <td>
+            <button type="button" class="btn btn-primary btn-sm" title="Xem" data-bs-toggle="modal" data-bs-target="#viewTOModal" onclick="viewTourOperator(${operator.id})">
+              <i class="bi bi-eye"></i>
+            </button>
+            <button type="button" class="btn btn-warning btn-sm" title="Sửa" data-bs-toggle="modal" data-bs-target="#editTOModal" onclick="editTourOperator(${operator.id})">
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-sm" title="Xóa" data-bs-toggle="modal" data-bs-target="#deleteTOModal" onclick="deleteTourOperator(${operator.id})">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>`;
+      tbody.insertAdjacentHTML('beforeend', row);
+    });
+  }
+  
+  renderPagination(operatorList);
+}
+
+// renderPagination: Hiển thị thanh phân trang dựa trên tổng số bản ghi
+// English: Render the pagination controls based on total records.
+function renderPagination(operatorList) {
+  const totalPages = Math.ceil(operatorList.length / rowsPerPage);
+  const pagination = document.getElementById('pagination');
+  pagination.innerHTML = '';
+
+  // Nút trang trước / Previous button
+  pagination.innerHTML += `
+    <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+      <a class="page-link" href="#" onclick="changePage(${currentPage - 1})">«</a>
+    </li>`;
+
+  // Số trang / Page numbers
+  for (let i = 1; i <= totalPages; i++) {
+    pagination.innerHTML += `
+      <li class="page-item ${i === currentPage ? 'active' : ''}">
+        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+      </li>`;
+  }
+
+  // Nút trang sau / Next button
+  pagination.innerHTML += `
+    <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+      <a class="page-link" href="#" onclick="changePage(${currentPage + 1})">»</a>
+    </li>`;
+}
+
+// changePage: Chuyển trang và hiển thị lại dữ liệu
+// English: Change page and re-display the data.
+function changePage(page) {
+  const totalPages = Math.ceil(filteredTourOperators.length / rowsPerPage);
+  if (page < 1) page = 1;
+  if (page > totalPages) page = totalPages;
+  currentPage = page;
+  displayTourOperators(currentPage, filteredTourOperators);
+}
+
+// searchTourOperators: Tìm kiếm người điều hành theo ID hoặc tên
+// English: Search for tour operators by ID or name.
+function searchTourOperators() {
+  const searchValue = document.getElementById('searchTOInput').value.toLowerCase();
+  filteredTourOperators = tourOperators.filter(operator => 
+    operator.id.toString().includes(searchValue) ||
+    `${operator.firstname} ${operator.lastname}`.toLowerCase().includes(searchValue)
+  );
+  currentPage = 1;
+  displayTourOperators(currentPage, filteredTourOperators);
+}
+
+// fetchTourOperators: Tải danh sách người điều hành từ API và hiển thị trang 1
+// English: Fetch the tour operators from the API and display page 1 immediately.
+async function fetchTourOperators() {
+  toggleLoading(true);
+  try {
+    const response = await axios.get('http://localhost:8080/api/tour-operators');
+    tourOperators = response.data || [];
+    filteredTourOperators = [...tourOperators];
+    console.log('Danh sách người điều hành:', tourOperators);
+    // Hiển thị trang 1 ngay sau khi tải xong / Display page 1 once loaded
+    displayTourOperators(currentPage, filteredTourOperators);
+  } catch (error) {
+    console.error('Lỗi khi lấy danh sách người điều hành:', error);
+    document.getElementById('to-table-body').innerHTML = 
+      `<tr><td colspan="9" class="text-center text-danger">Không thể tải danh sách người điều hành!</td></tr>`;
+    tourOperators = [];
+    filteredTourOperators = [];
+    renderPagination(filteredTourOperators);
+  } finally {
+    toggleLoading(false);
+  }
+}
+
+// Các hàm viewTourOperator, editTourOperator, deleteTourOperator, addTOForm xử lý tương tự như ban đầu...
+
+// viewTourOperator: Xem chi tiết người điều hành / View tour operator details
+function viewTourOperator(id) {
+  const operator = tourOperators.find(op => op.id === id);
+  if (!operator) return;
+
+  document.getElementById('viewTOId').textContent = operator.id;
+  document.getElementById('viewTOFullname').textContent = `${operator.firstname} ${operator.lastname}`;
+  document.getElementById('viewTODateOfBirth').textContent = new Date(operator.dateOfBirth).toLocaleDateString('vi-VN');
+  document.getElementById('viewTOGender').textContent = operator.gender ? 'Nam' : 'Nữ';
+  document.getElementById('viewTOCitizenId').textContent = operator.citizenId || '';
+  document.getElementById('viewTOPhoneNumber').textContent = operator.phoneNumber || '';
+  document.getElementById('viewTOAddress').textContent = operator.address || '';
+  document.getElementById('viewTOHometown').textContent = operator.hometown || '';
+  document.getElementById('viewTOSalary').textContent = operator.salary ? operator.salary.toLocaleString('vi-VN') + 'đ' : '';
+  document.getElementById('viewTOStartDate').textContent = operator.startDate ? new Date(operator.startDate).toLocaleDateString('vi-VN') : '';
+  document.getElementById('viewTOEndDate').textContent = operator.endDate ? new Date(operator.endDate).toLocaleDateString('vi-VN') : 'N/A';
+}
+
+// editTourOperator: Sửa thông tin người điều hành / Edit tour operator information
+function editTourOperator(id) {
+  const operator = tourOperators.find(op => op.id === id);
+  if (!operator) return;
+
+  document.getElementById('editTOId').value = operator.id;
+  document.getElementById('editTOFirstname').value = operator.firstname;
+  document.getElementById('editTOLastname').value = operator.lastname;
+  document.getElementById('editTODateOfBirth').value = operator.dateOfBirth;
+  document.getElementById('editTOGender').value = operator.gender.toString();
+  document.getElementById('editTOPhoneNumber').value = operator.phoneNumber || '';
+  document.getElementById('editTOCitizenId').value = operator.citizenId || '';
+  document.getElementById('editTOSalary').value = operator.salary || '';
+  document.getElementById('editTOStartDate').value = operator.startDate || '';
+  document.getElementById('editTOEndDate').value = operator.endDate || '';
+  document.getElementById('editTOAddress').value = operator.address || '';
+  document.getElementById('editTOHometown').value = operator.hometown || '';
+
+  // Xử lý submit form cập nhật / Handle form submit for update
+  document.getElementById('editTOForm').onsubmit = async function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const updatedOperator = {};
+    formData.forEach((value, key) => {
+      updatedOperator[key] = value === '' ? null : value;
+    });
+    try {
+      await axios.put(`http://localhost:8080/api/tour-operators/${operator.id}`, updatedOperator);
+      alert('Cập nhật người điều hành thành công!');
+      fetchTourOperators();
+    } catch (error) {
+      console.error('Lỗi khi cập nhật người điều hành:', error);
+      alert('Không thể cập nhật người điều hành! Vui lòng thử lại.');
+    } finally {
+      const modal = bootstrap.Modal.getInstance(document.getElementById('editTOModal'));
+      modal.hide();
+    }
+  };
+}
+
+// deleteTourOperator: Xóa người điều hành / Delete tour operator
+function deleteTourOperator(id) {
+  const operator = tourOperators.find(op => op.id === id);
+  if (!operator) return;
+  document.getElementById('deleteTOId').value = operator.id;
+  document.getElementById('confirmDeleteBtn').onclick = async function () {
+    try {
+      await axios.delete(`http://localhost:8080/api/tour-operators/${operator.id}`);
+      alert('Xóa người điều hành thành công!');
+      fetchTourOperators();
+    } catch (error) {
+      console.error('Lỗi khi xóa người điều hành:', error);
+      alert('Không thể xóa người điều hành! Vui lòng thử lại.');
+    } finally {
+      const modal = bootstrap.Modal.getInstance(document.getElementById('deleteTOModal'));
+      modal.hide();
+    }
+  };
+}
+
+// Xử lý form thêm người điều hành mới / Handle form submission for adding a new tour operator
+document.getElementById('addTOForm').onsubmit = async function (e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+  const newOperator = {};
+  formData.forEach((value, key) => {
+    newOperator[key] = value === '' ? null : value;
+  });
+  try {
+    await axios.post('http://localhost:8080/api/tour-operators', newOperator);
+    alert('Thêm người điều hành thành công!');
+    fetchTourOperators();
+  } catch (error) {
+    console.error('Lỗi khi thêm người điều hành:', error);
+    alert('Không thể thêm người điều hành! Vui lòng thử lại.');
+  } finally {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('addTOModal'));
+    modal.hide();
+  }
+};
+
+// Gọi hàm fetchTourOperators khi trang tải / Fetch tour operators when the document is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  fetchTourOperators();
+});
+
+</script>
+</body>
+</html>
