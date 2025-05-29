@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Quản lý tour - TravelVN</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Tour_Op</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+          </ul><!-- End Notification Dropdown Items -->
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+          </ul><!-- End Messages Dropdown Items -->
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Hi, Thu</span>
+          </a><!-- End Profile Image Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Người điều hành</h6>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Thông tin cá nhân</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Cài đặt tài khoản</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Đăng xuất</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+    
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="index.html">
+        <i class="bi bi-house"></i>
+        <span>Trang chủ</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link" href="tours.html">
+        <i class="bi bi-map"></i>
+        <span>Quản lý Tour</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="cancel_req.html">
+        <i class="bi bi-x-circle"></i>
+        <span>Duyệt yêu cầu hủy Tour</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="customers.html">
+        <i class="bi bi-people"></i>
+        <span>Quản lý khách hàng</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="festivals.html">
+        <i class="bi bi-flag"></i>
+        <span>Quản lý lễ hội</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="discounts.html">
+        <i class="bi bi-tag"></i>
+        <span>Quản lý giảm giá</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="tour-guides.html">
+        <i class="bi bi-person-circle"></i>
+        <span>Quản lý hướng dẫn viên</span>
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="tour-unit.html">
+        <i class="bi bi-calendar2-range"></i>
+        <span>Quản lý đơn vị tour</span>
+      </a>
+    </li>
+  </ul>
+
+</aside><!-- End Sidebar-->
+
+  <!-- ======= Main ======= -->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Quản lý tour</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý tour</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Danh sách tour</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTourModal">
+                  <i class="bi bi-plus-circle"></i> Thêm tour mới
+                </button>
+              </div>
+
+              <!-- Search & Filter -->
+              <div class="row mb-3">
+                <div class="col-md-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="searchTourInput" placeholder="Tìm kiếm tour theo ID...">
+                    <button class="btn btn-primary" type="button" onclick="searchTours()">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Mã tour</th>
+                    <th scope="col">Tên tour</th>
+                    <th scope="col">Thời lượng</th>
+                    <th scope="col">Đối tượng</th>
+                    <th scope="col">Điểm đến</th>
+                    <th scope="col">Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="tour-table-body">
+                  <!-- Dữ liệu sẽ được thêm động bởi JavaScript -->
+                </tbody>
+              </table>
+
+              <!-- Pagination -->
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div></div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination mb-0" id="pagination">
+                    <!-- JavaScript sẽ tạo pagination ở đây -->
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Tour Modal -->
+  <div class="modal fade" id="addTourModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm tour mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addTourForm">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Tên tour</label>
+                <input type="text" class="form-control" name="tourName" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Thời lượng</label>
+                <input type="text" class="form-control" name="duration" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phương tiện</label>
+                <input type="text" class="form-control" name="vehicle" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Đối tượng</label>
+              <textarea class="form-control" name="targetAudience" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Điểm khởi hành</label>
+              <textarea class="form-control" name="departurePlace" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Địa điểm tham quan</label>
+              <textarea class="form-control" name="placesToVisit" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Món ăn</label>
+              <textarea class="form-control" name="cuisine" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Thời gian lý tưởng</label>
+              <textarea class="form-control" name="idealTime" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mô tả</label>
+              <textarea class="form-control" name="description" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Bao gồm</label>
+              <textarea class="form-control" name="inclusions" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Chưa bao gồm</label>
+              <textarea class="form-control" name="exclusions" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Thể loại</label>
+              <select name="categoryId" id="tour_type" class="form-select">
+                <option value="1">Văn hóa</option>
+                <option value="5">Thiên nhiên</option>
+                <option value="3">Mạo hiểm</option>
+              </select>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Tour Operator ID</label>
+                <input type="number" class="form-control" name="tourOperatorId" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Last Updated Operator ID</label>
+                <input type="number" class="form-control" name="lastUpdatedOperatorId">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="addTourForm" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Tour Modal -->
+  <div class="modal fade" id="viewTourModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chi tiết Tour</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Mã tour:</strong> <span id="viewTourId"></span></p>
+              <p><strong>Tên tour:</strong> <span id="viewTourName"></span></p>
+              <p><strong>Thời lượng:</strong> <span id="viewDuration"></span></p>
+              <p><strong>Phương tiện:</strong> <span id="viewVehicle"></span></p>
+              <p><strong>Đối tượng:</strong> <span id="viewTargetAudience"></span></p>
+              <p><strong>Điểm khởi hành:</strong> <span id="viewDeparturePlace"></span></p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Địa điểm tham quan:</strong> <span id="viewPlacesToVisit"></span></p>
+              <p><strong>Món ăn:</strong> <span id="viewCuisine"></span></p>
+              <p><strong>Thời gian lý tưởng:</strong> <span id="viewIdealTime"></span></p>
+              <p><strong>Thể loại:</strong> <span id="viewTourType"></span></p>
+              <p><strong>Ngày tạo:</strong> <span id="viewCreatedTime"></span></p>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <h6>Mô tả:</h6>
+              <p id="viewDescription"></p>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <h6>Bao gồm:</h6>
+              <p id="viewInclusions"></p>
+            </div>
+            <div class="col-md-6">
+              <h6>Không bao gồm:</h6>
+              <p id="viewExclusions"></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Tour Modal -->
+  <div class="modal fade" id="editTourModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chỉnh sửa thông tin Tour</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editTourForm">
+            <input type="hidden" name="tourId" id="editTourId">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Mã tour</label>
+                <input type="text" class="form-control" name="tourIdDisplay" id="editTourIdDisplay" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Tên tour</label>
+                <input type="text" class="form-control" name="tourName" id="editTourName" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Thời lượng</label>
+                <input type="text" class="form-control" name="duration" id="editDuration" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phương tiện</label>
+                <input type="text" class="form-control" name="vehicle" id="editVehicle" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Đối tượng</label>
+              <textarea class="form-control" name="targetAudience" id="editTargetAudience" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Điểm khởi hành</label>
+              <textarea class="form-control" name="departurePlace" id="editDeparturePlace" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Địa điểm tham quan</label>
+              <textarea class="form-control" name="placesToVisit" id="editPlacesToVisit" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Món ăn</label>
+              <textarea class="form-control" name="cuisine" id="editCuisine" rows="3"></textarea>
+            </div>
+            <div class="row mb-3">
+              <label class="form-label">Thời gian lý tưởng</label>
+              <textarea class="form-control" name="idealTime" id="editIdealTime" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mô tả</label>
+              <textarea class="form-control" name="description" id="editDescription" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Bao gồm</label>
+              <textarea class="form-control" name="inclusions" id="editInclusions" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Chưa bao gồm</label>
+              <textarea class="form-control" name="exclusions" id="editExclusions" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Thể loại</label>
+              <select name="categoryId" id="editCategoryId" class="form-select">
+                <option value="1">Văn hóa</option>
+                <option value="5">Thiên nhiên</option>
+                <option value="3">Mạo hiểm</option>
+              </select>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Tour Operator ID</label>
+                <input type="number" class="form-control" name="tourOperatorId" id="editTourOperatorId" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Last Updated Operator ID</label>
+                <input type="number" class="form-control" name="lastUpdatedOperatorId" id="editLastUpdatedOperatorId">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="editTourForm" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Tour Modal -->
+  <div class="modal fade" id="deleteTourModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Xác nhận xóa tour</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn có chắc chắn muốn xóa tour <strong id="deleteTourName"></strong>?</p>
+          <p class="text-danger">Lưu ý: Hành động này không thể hoàn tác.</p>
+          <input type="hidden" id="deleteTourId">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/upload-images.js"></script>
+
+  <!-- Custom JS for Tours -->
+  <script>
+    let tours = [];
+    const rowsPerPage = 12;
+    let currentPage = 1;
+    let isLoading = false;
+    const tourCache = {};
+
+    function toggleLoading(show) {
+      isLoading = show;
+      const tbody = document.getElementById('tour-table-body');
+      if (show) {
+        tbody.innerHTML = show ? '<tr><td colspan="6" class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></td></tr>' : '';
+      }
+    }
+
+    async function fetchTours(page = 1) {
+      console.log('Bắt đầu fetchTours, trang:', page);
+      if (isLoading) return;
+      toggleLoading(true);
+      try {
+        const response = await axios.get('http://localhost:8080/api/tours');
+        console.log('Dữ liệu từ API:', response.data);
+        tours = response.data || [];
+        tours.forEach(tour => {
+          tourCache[tour.tourId] = tour;
+        });
+        currentPage = page;
+        console.log('Gán tours:', tours.length, 'currentPage:', currentPage);
+        displayTours(currentPage);
+      } catch (error) {
+        console.error('Lỗi khi lấy danh sách:', error);
+        const tbody = document.getElementById('tour-table-body');
+        if (tbody) {
+          tbody.innerHTML = '<tr><td colspan="6" class="text-center">Không thể tải danh sách tour!</td></tr>';
+        }
+      } finally {
+        toggleLoading(false);
+      }
+    }
+
+    async function searchTours() {
+      const searchTerm = document.getElementById('searchTourInput')?.value.trim();
+      console.log('Từ khóa tìm kiếm:', searchTerm);
+      if (!searchTerm) {
+        alert('Vui lòng nhập mã tour để tìm kiếm!');
+        fetchTours(1);
+        return;
+      }
+      if (isLoading) return;
+      toggleLoading(true);
+      try {
+        if (tourCache[searchTerm]) {
+          console.log('Lấy từ cache:', tourCache[searchTerm]);
+          tours = [tourCache[searchTerm]];
+          currentPage = 1;
+          displayTours(currentPage);
+          return;
+        }
+        const url = `http://localhost:8080/api/tours/${encodeURIComponent(searchTerm)}`;
+        console.log('Gửi yêu cầu API:', url);
+        const response = await axios.get(url);
+        console.log('Kết quả tìm kiếm:', response.data);
+        const tour = response.data;
+        tourCache[searchTerm] = tour;
+        tours = [tour];
+        currentPage = 1;
+        displayTours(currentPage);
+      } catch (error) {
+        console.error('Lỗi khi tìm kiếm:', error);
+        let errorMsg = 'Không thể tìm kiếm tour!';
+        if (error.response?.status === 404) {
+          errorMsg = `Không tìm thấy tour với mã "${searchTerm}"!`;
+        } else if (error.response?.data?.message) {
+          errorMsg = error.response.data.message;
+        } else if (error.message.includes('Network Error')) {
+          errorMsg = 'Không thể kết nối đến backend! Vui lòng kiểm tra server.';
+        }
+        const tbody = document.getElementById('tour-table-body');
+        if (tbody) {
+          tbody.innerHTML = `<tr><td colspan="6" class="text-center">${errorMsg}</td></tr>`;
+        }
+        tours = [];
+        renderPagination(0, currentPage);
+      } finally {
+        toggleLoading(false);
+      }
+    }
+
+    function displayTours(page) {
+      console.log('Hiển thị trang:', page, 'Dữ liệu:', tours);
+      const tbody = document.getElementById('tour-table-body');
+      if (!tbody) {
+        console.error('Không tìm thấy tour-table-body!');
+        return;
+      }
+      tbody.innerHTML = '';
+
+      const start = (page - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const paginatedTours = tours.slice(start, end);
+
+      if (!paginatedTours || paginatedTours.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" class="text-center">Không có tour nào!</td></tr>';
+        renderPagination(0, page);
+        return;
+      }
+
+      paginatedTours.forEach((tour, index) => {
+        const row = `
+          <tr>
+            <td>${tour.tourId || 'N/A'}</td>
+            <td>${tour.tourName || 'N/A'}</td>
+            <td>${tour.duration || 'N/A'}</td>
+            <td>${tour.targetAudience || 'N/A'}</td>
+            <td>${tour.placesToVisit || 'N/A'}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm" title="Xem" data-bs-toggle="modal" data-bs-target="#viewTourModal" onclick="viewTour('${tour.tourId}')">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button type="button" class="btn btn-warning btn-sm" title="Sửa" data-bs-toggle="modal" data-bs-target="#editTourModal" onclick="editTour('${tour.tourId}')">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button type="button" class="btn btn-danger btn-sm" title="Xóa" data-bs-toggle="modal" data-bs-target="#deleteTourModal" onclick="prepareDelete('${tour.tourId}', '${tour.tourName}')">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>`;
+        tbody.insertAdjacentHTML('beforeend', row);
+      });
+
+      renderPagination(tours.length, page);
+    }
+
+    function renderPagination(totalRows, activePage) {
+      console.log('Render phân trang:', totalRows, 'Trang hiện tại:', activePage);
+      const pagination = document.getElementById('pagination');
+      if (!pagination) {
+        console.error('Không tìm thấy pagination!');
+        return;
+      }
+      pagination.innerHTML = '';
+
+      if (totalRows === 0) return;
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === 1 ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage - 1})">«</a>
+        </li>`;
+
+      const totalPages = Math.ceil(totalRows / rowsPerPage);
+      for (let i = 1; i <= totalPages; i++) {
+        pagination.innerHTML += `
+          <li class="page-item ${i === activePage ? 'active' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+          </li>`;
+      }
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === totalPages ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage + 1})">»</a>
+        </li>`;
+    }
+
+    window.changePage = function(page) {
+      console.log('Chuyển trang:', page);
+      if (page < 1 || page > Math.ceil(tours.length / rowsPerPage) || isLoading) return;
+      currentPage = page;
+      displayTours(currentPage);
+    };
+
+    async function viewTour(tourId) {
+      try {
+        let tour;
+        if (tourCache[tourId]) {
+          console.log('Lấy chi tiết từ cache:', tourCache[tourId]);
+          tour = tourCache[tourId];
+        } else {
+          const response = await axios.get(`http://localhost:8080/api/tours/${tourId}`);
+          console.log('Chi tiết tour:', response.data);
+          tour = response.data;
+          tourCache[tourId] = tour;
+        }
+        document.getElementById('viewTourId').textContent = tour.tourId || 'N/A';
+        document.getElementById('viewTourName').textContent = tour.tourName || 'N/A';
+        document.getElementById('viewDuration').textContent = tour.duration || 'N/A';
+        document.getElementById('viewVehicle').textContent = tour.vehicle || 'N/A';
+        document.getElementById('viewTargetAudience').textContent = tour.targetAudience || 'N/A';
+        document.getElementById('viewDeparturePlace').textContent = tour.departurePlace || 'N/A';
+        document.getElementById('viewPlacesToVisit').textContent = tour.placesToVisit || 'N/A';
+        document.getElementById('viewCuisine').textContent = tour.cuisine || 'N/A';
+        document.getElementById('viewIdealTime').textContent = tour.idealTime || 'N/A';
+        document.getElementById('viewTourType').textContent = {
+          '1': 'Văn hóa',
+          '5': 'Thiên nhiên',
+          '3': 'Mạo hiểm'
+        }[tour.categoryId] || 'N/A';
+        document.getElementById('viewCreatedTime').textContent = tour.createdTime || 'N/A';
+        document.getElementById('viewDescription').textContent = tour.description || 'N/A';
+        document.getElementById('viewInclusions').textContent = tour.inclusions || 'N/A';
+        document.getElementById('viewExclusions').textContent = tour.exclusions || 'N/A'; 
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Tour không tồn tại!' : (error.response?.data?.message || 'Không thể lấy thông tin tour!'));
+      }
+    }
+
+    async function editTour(tourId) {
+      try {
+        let tour;
+        if (tourCache[tourId]) {
+          console.log('Lấy dữ liệu sửa từ cache:', tourCache[tourId]);
+          tour = tourCache[tourId];
+        } else {
+          const response = await axios.get(`http://localhost:8080/api/tours/${tourId}`);
+          console.log('Dữ liệu để sửa:', response.data);
+          tour = response.data;
+          tourCache[tourId] = tour;
+        }
+        const form = document.getElementById('editTourForm');
+        form.querySelector('#editTourId').value = tour.tourId || '';
+        form.querySelector('#editTourIdDisplay').value = tour.tourId || '';
+        form.querySelector('#editTourName').value = tour.tourName || '';
+        form.querySelector('#editDuration').value = tour.duration || '';
+        form.querySelector('#editVehicle').value = tour.vehicle || '';
+        form.querySelector('#editTargetAudience').value = tour.targetAudience || '';
+        form.querySelector('#editDeparturePlace').value = tour.departurePlace || '';
+        form.querySelector('#editPlacesToVisit').value = tour.placesToVisit || '';
+        form.querySelector('#editCuisine').value = tour.cuisine || '';
+        form.querySelector('#editIdealTime').value = tour.idealTime || '';
+        form.querySelector('#editDescription').value = tour.description || '';
+        form.querySelector('#editInclusions').value = tour.inclusions || '';
+        form.querySelector('#editExclusions').value = tour.exclusions || '';
+        form.querySelector('#editCategoryId').value = tour.categoryId || '';
+        form.querySelector('#editTourOperatorId').value = tour.tourOperatorId || '';
+        form.querySelector('#editLastUpdatedOperatorId').value = tour.lastUpdatedOperatorId || '';
+
+        const editImagePreview = document.getElementById('editImagePreview');
+        editImagePreview.innerHTML = '';
+        if (tour.tourImages && tour.tourImages.length > 0) {
+          tour.tourImages.forEach(image => {
+            editImagePreview.innerHTML += `
+              <div class="col-md-4">
+                <img src="${image}" alt="Tour Image" class="img-fluid mb-2">
+              </div>`;
+          });
+        }
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Tour không tồn tại!' : (error.response?.data?.message || 'Không thể lấy thông tin tour!'));
+      }
+    }
+
+    function prepareDelete(tourId, tourName) {
+      const deleteTourId = document.getElementById('deleteTourId');
+      const deleteTourNameElement = document.getElementById('deleteTourName');
+      if (deleteTourId && deleteTourNameElement) {
+        deleteTourId.value = tourId;
+        deleteTourNameElement.textContent = tourName;
+      }
+    }
+
+    document.getElementById('confirmDeleteBtn')?.addEventListener('click', async () => {
+      const tourId = document.getElementById('deleteTourId')?.value;
+      if (!tourId) return;
+      try {
+        await axios.delete(`http://localhost:8080/api/tours/${tourId}`);
+        alert('Xóa tour thành công!');
+        delete tourCache[tourId];
+        fetchTours(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('deleteTourModal'))?.hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Tour không tồn tại!' : (error.response?.data?.message || 'Không thể xóa tour!'));
+      }
+    });
+
+    document.getElementById('addTourForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        if (key !== 'tour_images') data[key] = value;
+      });
+
+      try {
+        const response = await axios.post('http://localhost:8080/api/tours', data);
+        alert('Thêm tour thành công!');
+        tourCache[response.data.tourId] = response.data;
+        form.reset();
+        document.getElementById('imagePreview').innerHTML = '';
+        fetchTours(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('addTourModal'))?.hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        const errorMsg = error.response?.data?.message || error.response?.data?.errors?.join(', ') || 'Không thể thêm tour!';
+        alert(errorMsg);
+      }
+    });
+
+    document.getElementById('editTourForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const tourId = form.querySelector('#editTourId').value;
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        if (key !== 'tour_images' && key !== 'tourIdDisplay') data[key] = value;
+      });
+      try {
+        const response = await axios.put(`http://localhost:8080/api/tours/${tourId}`, data);
+        alert('Cập nhật tour thành công!');
+        tourCache[tourId] = response.data;
+        fetchTours(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('editTourModal'))?.hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        const errorMsg = error.response?.status === 404 ? 'Tour không tồn tại!' : (error.response?.data?.message || error.response?.data?.errors?.join(', ') || 'Không thể cập nhật tour!');
+        alert(errorMsg);
+      }
+    });
+
+    document.getElementById('searchTourInput')?.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        searchTours();
+      }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Trang được load');
+      fetchTours(1);
+    });
+  </script>
+</body>
+</html>
