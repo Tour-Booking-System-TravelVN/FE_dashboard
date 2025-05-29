@@ -146,7 +146,7 @@
             'Accept': 'application/json'
           },
           credentials: 'include',
-          body: JSON.stringify({ username, password })
+          body: JSON.stringify({ "username": username, "password": password })
         });
     
         const data = await response.json();
@@ -158,7 +158,8 @@
         if (data.code !== 0) {
           throw new Error(data.message || 'Đăng nhập thất bại! Server trả về lỗi.');
         }
-        if (!data.result || !data.result.authenticated) {
+        //|| !data.result.authenticated
+        if (!data.result) {
           throw new Error('Xác thực thất bại! Vui lòng kiểm tra tên người dùng hoặc mật khẩu.');
         }
     
