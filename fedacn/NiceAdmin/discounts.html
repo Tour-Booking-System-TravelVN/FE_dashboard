@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Quản lý giảm giá - TravelVN</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Tour_Op</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+          </ul><!-- End Notification Dropdown Items -->
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+          </ul><!-- End Messages Dropdown Items -->
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Hi, Thu</span>
+          </a><!-- End Profile Image Icon -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Người điều hành</h6>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Thông tin cá nhân</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Cài đặt tài khoản</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Đăng xuất</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+    
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="index.html">
+        <i class="bi bi-house"></i>
+        <span>Trang chủ</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link" href="tours.html">
+        <i class="bi bi-map"></i>
+        <span>Quản lý Tour</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="cancel_req.html">
+        <i class="bi bi-x-circle"></i>
+        <span>Duyệt yêu cầu hủy Tour</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="customers.html">
+        <i class="bi bi-people"></i>
+        <span>Quản lý khách hàng</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="festivals.html">
+        <i class="bi bi-flag"></i>
+        <span>Quản lý lễ hội</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="discounts.html">
+        <i class="bi bi-tag"></i>
+        <span>Quản lý giảm giá</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="tour-guides.html">
+        <i class="bi bi-person-circle"></i>
+        <span>Quản lý hướng dẫn viên</span>
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="tour-unit.html">
+        <i class="bi bi-calendar2-range"></i>
+        <span>Quản lý đơn vị tour</span>
+      </a>
+    </li>
+  </ul>
+
+</aside><!-- End Sidebar-->
+
+  <!-- ======= Main ======= -->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Quản lý giảm giá</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý giảm giá</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">Danh sách giảm giá</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addDiscountModal">
+                  <i class="bi bi-plus-circle"></i> Thêm giảm giá mới
+                </button>
+              </div>
+
+              <!-- Search & Filter -->
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="searchDiscountInput" placeholder="Tìm kiếm giảm giá...">
+                    <button class="btn btn-primary" type="button" onclick="searchDiscounts()">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Tên giảm giá</th>
+                    <th scope="col">Giá trị</th>
+                    <th scope="col">Đơn vị</th>
+                    <th scope="col">Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="discount-table-body">
+                  <!-- Dữ liệu sẽ được thêm động bởi JavaScript -->
+                </tbody>
+              </table>
+
+              <!-- Pagination -->
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div></div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination mb-0" id="pagination">
+                    <!-- JavaScript sẽ tạo pagination ở đây -->
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Discount Modal -->
+  <div class="modal fade" id="addDiscountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thêm giảm giá mới</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addDiscountForm">
+            <div class="mb-3">
+              <label class="form-label">Tên giảm giá</label>
+              <input type="text" class="form-control" name="discountName" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Giá trị</label>
+              <input type="number" class="form-control" name="discountValue" step="0.001" min="0" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Đơn vị</label>
+              <select class="form-select" name="discountUnit" required>
+                <option value="%">%</option>
+                <option value="VND">VND</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="addDiscountForm" class="btn btn-primary">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Discount Modal -->
+  <div class="modal fade" id="viewDiscountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chi tiết giảm giá</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <strong>ID:</strong>
+            <p id="viewDiscountId"></p>
+          </div>
+          <div class="mb-3">
+            <strong>Tên giảm giá:</strong>
+            <p id="viewDiscountName"></p>
+          </div>
+          <div class="mb-3">
+            <strong>Giá trị:</strong>
+            <p id="viewDiscountValue"></p>
+          </div>
+          <div class="mb-3">
+            <strong>Đơn vị:</strong>
+            <p id="viewDiscountUnit"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Discount Modal -->
+  <div class="modal fade" id="editDiscountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Chỉnh sửa giảm giá</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editDiscountForm">
+            <input type="hidden" name="id" id="editDiscountId">
+            <div class="mb-3">
+              <label class="form-label">Tên giảm giá</label>
+              <input type="text" class="form-control" name="discountName" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Giá trị</label>
+              <input type="number" class="form-control" name="discountValue" step="0.001" min="0" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Đơn vị</label>
+              <select class="form-select" name="discountUnit" required>
+                <option value="%">%</option>
+                <option value="VND">VND</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="submit" form="editDiscountForm" class="btn btn-primary">Lưu thay đổi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Discount Modal -->
+  <div class="modal fade" id="deleteDiscountModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Xác nhận xóa giảm giá</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn có chắc chắn muốn xóa giảm giá <strong id="deleteDiscountName"></strong>?</p>
+          <input type="hidden" id="deleteDiscountId">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for Discounts -->
+  <script>
+    let discounts = [];
+    const rowsPerPage = 12;
+    let currentPage = 1;
+    let isLoading = false;
+
+    function formatDiscountValue(value, unit) {
+      if (!value) return 'N/A';
+      return unit === '%' ? `${value}%` : `${value.toLocaleString('vi-VN')} VND`;
+    }
+
+    function toggleLoading(show) {
+      isLoading = show;
+      const tbody = document.getElementById('discount-table-body');
+      if (show) {
+        tbody.innerHTML = show ? '<tr><td colspan="5" class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></td></tr>' : '';
+      }
+    }
+
+    async function fetchDiscounts(page = 1) {
+      if (isLoading) return;
+      toggleLoading(true);
+      try {
+        const response = await axios.get('http://localhost:8080/api/discounts');
+        discounts = response.data || [];
+        currentPage = page;
+        displayDiscounts(currentPage);
+      } catch (error) {
+        console.error('Lỗi khi lấy danh sách:', error);
+        const tbody = document.getElementById('discount-table-body');
+        if (tbody) {
+          tbody.innerHTML = '<tr><td colspan="5" class="text-center">Không thể tải danh sách giảm giá!</td></tr>';
+        }
+      } finally {
+        toggleLoading(false);
+      }
+    }
+
+    async function searchDiscounts() {
+      const searchTerm = document.getElementById('searchDiscountInput')?.value.trim().toLowerCase();
+      if (!searchTerm) {
+        fetchDiscounts(1);
+        return;
+      }
+      if (isLoading) return;
+      toggleLoading(true);
+      try {
+        const response = await axios.get('http://localhost:8080/api/discounts');
+        discounts = response.data.filter(discount =>
+          discount.discountName.toLowerCase().includes(searchTerm)
+        );
+        currentPage = 1;
+        displayDiscounts(currentPage);
+      } catch (error) {
+        console.error('Lỗi khi tìm kiếm:', error);
+        const tbody = document.getElementById('discount-table-body');
+        if (tbody) {
+          tbody.innerHTML = '<tr><td colspan="5" class="text-center">Không thể tìm kiếm giảm giá!</td></tr>';
+        }
+        discounts = [];
+        renderPagination(0, currentPage);
+      } finally {
+        toggleLoading(false);
+      }
+    }
+
+    function displayDiscounts(page) {
+      const tbody = document.getElementById('discount-table-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      const start = (page - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const paginatedDiscounts = discounts.slice(start, end);
+
+      if (paginatedDiscounts.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center">Không có giảm giá nào!</td></tr>';
+        renderPagination(0, page);
+        return;
+      }
+
+      paginatedDiscounts.forEach(discount => {
+        const row = `
+          <tr>
+            <td>${discount.id || 'N/A'}</td>
+            <td>${discount.discountName || 'N/A'}</td>
+            <td>${formatDiscountValue(discount.discountValue, discount.discountUnit)}</td>
+            <td>${discount.discountUnit || 'N/A'}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-sm" title="Xem" data-bs-toggle="modal" data-bs-target="#viewDiscountModal" onclick="viewDiscount(${discount.id})">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button type="button" class="btn btn-warning btn-sm" title="Sửa" data-bs-toggle="modal" data-bs-target="#editDiscountModal" onclick="editDiscount(${discount.id})">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button type="button" class="btn btn-danger btn-sm" title="Xóa" data-bs-toggle="modal" data-bs-target="#deleteDiscountModal" onclick="prepareDelete(${discount.id}, '${discount.discountName}')">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>`;
+        tbody.insertAdjacentHTML('beforeend', row);
+      });
+
+      renderPagination(discounts.length, page);
+    }
+
+    function renderPagination(totalRows, activePage) {
+      const pagination = document.getElementById('pagination');
+      if (!pagination) return;
+      pagination.innerHTML = '';
+
+      if (totalRows === 0) return;
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === 1 ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage - 1})">«</a>
+        </li>`;
+
+      const totalPages = Math.ceil(totalRows / rowsPerPage);
+      for (let i = 1; i <= totalPages; i++) {
+        pagination.innerHTML += `
+          <li class="page-item ${i === activePage ? 'active' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+          </li>`;
+      }
+
+      pagination.innerHTML += `
+        <li class="page-item ${activePage === totalPages ? 'disabled' : ''}">
+          <a class="page-link" href="#" onclick="changePage(${activePage + 1})">»</a>
+        </li>`;
+    }
+
+    window.changePage = function(page) {
+      if (page < 1 || page > Math.ceil(discounts.length / rowsPerPage) || isLoading) return;
+      currentPage = page;
+      displayDiscounts(currentPage);
+    };
+
+    async function viewDiscount(id) {
+      try {
+        const response = await axios.get(`http://localhost:8080/api/discounts/${id}`);
+        const discount = response.data;
+        document.getElementById('viewDiscountId').textContent = discount.id || 'N/A';
+        document.getElementById('viewDiscountName').textContent = discount.discountName || 'N/A';
+        document.getElementById('viewDiscountValue').textContent = formatDiscountValue(discount.discountValue, discount.discountUnit);
+        document.getElementById('viewDiscountUnit').textContent = discount.discountUnit || 'N/A';
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Giảm giá không tồn tại!' : 'Không thể lấy thông tin giảm giá!');
+      }
+    }
+
+    async function editDiscount(id) {
+      try {
+        const response = await axios.get(`http://localhost:8080/api/discounts/${id}`);
+        const discount = response.data;
+        const form = document.getElementById('editDiscountForm');
+        form.querySelector('#editDiscountId').value = discount.id || '';
+        form.querySelector('[name="discountName"]').value = discount.discountName || '';
+        form.querySelector('[name="discountValue"]').value = discount.discountValue || '';
+        form.querySelector('[name="discountUnit"]').value = discount.discountUnit || '%';
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Giảm giá không tồn tại!' : 'Không thể lấy thông tin giảm giá!');
+      }
+    }
+
+    function prepareDelete(id, discountName) {
+      const deleteDiscountId = document.getElementById('deleteDiscountId');
+      const deleteDiscountNameElement = document.getElementById('deleteDiscountName');
+      if (deleteDiscountId && deleteDiscountNameElement) {
+        deleteDiscountId.value = id;
+        deleteDiscountNameElement.textContent = discountName;
+      }
+    }
+
+    document.getElementById('confirmDeleteBtn')?.addEventListener('click', async () => {
+      const id = document.getElementById('deleteDiscountId')?.value;
+      if (!id) return;
+      try {
+        await axios.delete(`http://localhost:8080/api/discounts/${id}`);
+        alert('Xóa giảm giá thành công!');
+        fetchDiscounts(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('deleteDiscountModal'))?.hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Giảm giá không tồn tại!' : 'Không thể xóa giảm giá!');
+      }
+    });
+
+    document.getElementById('addDiscountForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const data = {
+        discountName: formData.get('discountName'),
+        discountValue: parseFloat(formData.get('discountValue')),
+        discountUnit: formData.get('discountUnit')
+      };
+
+      if (!data.discountName || isNaN(data.discountValue) || data.discountValue < 0) {
+        alert('Vui lòng điền đầy đủ và hợp lệ!');
+        return;
+      }
+
+      try {
+        await axios.post('http://localhost:8080/api/discounts', data);
+        alert('Thêm giảm giá thành công!');
+        form.reset();
+        fetchDiscounts(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('addDiscountModal'))?.hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.data?.message || 'Không thể thêm giảm giá!');
+      }
+    });
+
+    document.getElementById('editDiscountForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const id = form.querySelector('#editDiscountId').value;
+      const formData = new FormData(form);
+      const data = {
+        discountName: formData.get('discountName'),
+        discountValue: parseFloat(formData.get('discountValue')),
+        discountUnit: formData.get('discountUnit')
+      };
+
+      if (!data.discountName || isNaN(data.discountValue) || data.discountValue < 0) {
+        alert('Vui lòng điền đầy đủ và hợp lệ!');
+        return;
+      }
+
+      try {
+        await axios.put(`http://localhost:8080/api/discounts/${id}`, data);
+        alert('Cập nhật giảm giá thành công!');
+        fetchDiscounts(currentPage);
+        bootstrap.Modal.getInstance(document.getElementById('editDiscountModal'))?.hide();
+      } catch (error) {
+        console.error('Lỗi:', error);
+        alert(error.response?.status === 404 ? 'Giảm giá không tồn tại!' : (error.response?.data?.message || 'Không thể cập nhật giảm giá!'));
+      }
+    });
+
+    document.getElementById('searchDiscountInput')?.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        searchDiscounts();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchDiscounts(1);
+    });
+  </script>
+</body>
+</html>

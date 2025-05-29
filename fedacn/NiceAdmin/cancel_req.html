@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Quản lý khách hàng - TravelVN</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Tour_Op</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+          </ul><!-- End Notification Dropdown Items -->
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+          </ul><!-- End Messages Dropdown Items -->
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Hi, Thu</span>
+          </a><!-- End Profile Image Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Người điều hành</h6>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Thông tin cá nhân</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Cài đặt tài khoản</span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Đăng xuất</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+    
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="index.html">
+        <i class="bi bi-house"></i>
+        <span>Trang chủ</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link" href="tours.html">
+        <i class="bi bi-map"></i>
+        <span>Quản lý Tour</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="cancel_req.html">
+        <i class="bi bi-x-circle"></i>
+        <span>Duyệt yêu cầu hủy Tour</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="customers.html">
+        <i class="bi bi-people"></i>
+        <span>Quản lý khách hàng</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="festivals.html">
+        <i class="bi bi-flag"></i>
+        <span>Quản lý lễ hội</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="discounts.html">
+        <i class="bi bi-tag"></i>
+        <span>Quản lý giảm giá</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="tour-guides.html">
+        <i class="bi bi-person-circle"></i>
+        <span>Quản lý hướng dẫn viên</span>
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="tour-unit.html">
+        <i class="bi bi-calendar2-range"></i>
+        <span>Quản lý đơn vị tour</span>
+      </a>
+    </li>
+  </ul>
+
+</aside><!-- End Sidebar-->
+
+  <!-- ======= Main ======= -->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Duyệt yêu cầu hủy Tour</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Duyệt yêu cầu hủy Tour</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="card-title mb-0">Danh sách yêu cầu hủy Tour</h5>
+            <div id="total-records"></div>
+          </div>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Mã đặt tour</th>
+                <th>Mã khách hàng</th>
+                <th>Mã Tour</th>
+                <th>Lý do</th>
+                <th>Tổng tiền</th>
+                <th>Thời gian</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="booking-table-body">
+              <!-- Dữ liệu sẽ được render động -->
+            </tbody>
+          </table>
+
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center" id="pagination">
+              <!-- Pagination sẽ được render động -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- Modal Duyệt -->
+  <div class="modal fade" id="agree" tabindex="-1" aria-labelledby="agreeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agreeLabel">Duyệt yêu cầu hủy tour</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn có chắc chắn muốn duyệt yêu cầu hủy tour?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="button" class="btn btn-success">Đúng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Không Duyệt -->
+  <div class="modal fade" id="noagree" tabindex="-1" aria-labelledby="noagreeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="noagreeLabel">Không duyệt yêu cầu hủy tour</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn có chắc chắn không duyệt yêu cầu hủy tour?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          <button type="button" class="btn btn-danger">Đúng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Main JS -->
+  <script>
+    const rowsPerPage = 12;
+    let currentPage = 1;
+    let totalPages = 1;
+    let bookings = [];
+
+    // Hàm gọi API chung
+    async function callApi(endpoint, method = 'GET', data = null) {
+      try {
+        const config = { method, url: `http://localhost:8080/api/bookings${endpoint}` };
+        if (data) {
+          config.headers = { 'Content-Type': 'application/json' };
+          config.data = data;
+        }
+        const res = await axios(config);
+        return res.data;
+      } catch (err) {
+        console.error(`Lỗi khi gọi API ${endpoint}:`, err);
+        throw err;
+      }
+    }
+
+    // Tải danh sách yêu cầu hủy
+    async function fetchBookings(page = 1) {
+      currentPage = Math.max(1, page);
+      const tbody = document.getElementById('booking-table-body');
+      tbody.innerHTML = `<tr><td colspan="9" class="text-center">Đang tải...</td></tr>`;
+      try {
+        const data = await callApi(`/pending-cancel?page=${currentPage - 1}&size=${rowsPerPage}`);
+        if (!data || typeof data !== 'object') {
+          throw new Error('Dữ liệu trả về không hợp lệ');
+        }
+        bookings = Array.isArray(data) ? data : [];
+        totalPages = typeof data.totalElements === 'number' ? Math.ceil(data.totalElements / rowsPerPage) : 1;
+        document.getElementById('total-records').textContent = `Tổng số: ${data.totalElements || 0} bản ghi`;
+        renderTable();
+        renderPagination(data.totalElements || 0, currentPage);
+      } catch (err) {
+        console.error('Lỗi khi tải dữ liệu:', err.message);
+        tbody.innerHTML = `<tr><td colspan="9" class="text-center text-danger">Không thể tải dữ liệu! (${err.message})</td></tr>`;
+      }
+    }
+
+    // Render bảng
+    function renderTable() {
+      const tbody = document.getElementById('booking-table-body');
+      tbody.innerHTML = '';
+      if (bookings.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" class="text-center">Không có yêu cầu hủy nào.</td></tr>`;
+        return;
+      }
+      bookings.forEach((b, i) => {
+        const idx = (currentPage - 1) * rowsPerPage + i + 1;
+        const totalAmount = b.totalAmount != null
+          ? b.totalAmount.toLocaleString('vi-VN') + ' VNĐ'
+          : 'N/A';
+        tbody.insertAdjacentHTML('beforeend', `
+          <tr>
+            <td>${idx}</td>
+            <td>${b.bookingId || 'N/A'}</td>
+            <td>${b.cId || 'N/A'}</td>
+            <td>${b.tourUnitId || 'N/A'}</td>
+            <td>${b.note || ''}</td>
+            <td>${totalAmount}</td>
+            <td>${b.bookingDate ? new Date(b.bookingDate).toLocaleString() : 'N/A'}</td>
+            <td id="status-${b.bookingId}">${'Chờ hủy'}</td>
+            <td>
+              ${b.status === 'W' ? `
+                <button class="btn btn-success btn-sm approve-cancel" data-id="${b.bookingId}" data-bs-toggle="modal" data-bs-target="#agree" title="Duyệt">
+                  <i class="bi bi-check-circle"></i>
+                </button>
+                <button class="btn btn-danger btn-sm reject-cancel" data-id="${b.bookingId}" data-bs-toggle="modal" data-bs-target="#noagree" title="Từ chối">
+                  <i class="bi bi-x-circle"></i>
+                </button>
+              ` : ''}
+            </td>
+          </tr>
+        `);
+      });
+
+      // Gắn sự kiện cho nút duyệt và từ chối
+      document.querySelectorAll('.approve-cancel').forEach(btn => {
+        btn.onclick = () => document.querySelector('#agree .btn-success').dataset.id = btn.dataset.id;
+      });
+      document.querySelectorAll('.reject-cancel').forEach(btn => {
+        btn.onclick = () => document.querySelector('#noagree .btn-danger').dataset.id = btn.dataset.id;
+      });
+    }
+
+    // Render phân trang
+    function renderPagination(totalRows, activePage) {
+      const totalP = Math.ceil(totalRows / rowsPerPage);
+      totalPages = totalP;
+      const pager = document.getElementById('pagination');
+      pager.innerHTML = '';
+      if (totalRows === 0) return;
+
+      const maxLinks = 12;
+      let start = Math.max(1, activePage - Math.floor(maxLinks / 2));
+      let end = Math.min(totalP, start + maxLinks - 1);
+      if (end - start < maxLinks - 1) start = Math.max(1, end - maxLinks + 1);
+
+      const makeLi = (p, label, disabled = false, isActive = false) =>
+        `<li class="page-item ${disabled ? 'disabled' : ''} ${isActive ? 'active' : ''}">
+           <a class="page-link" href="#" onclick="changePage(${p}); return false;">${label}</a>
+         </li>`;
+
+      pager.insertAdjacentHTML('beforeend', makeLi(activePage - 1, '«', activePage === 1));
+      for (let i = start; i <= end; i++) {
+        pager.insertAdjacentHTML('beforeend', makeLi(i, i, false, i === activePage));
+      }
+      pager.insertAdjacentHTML('beforeend', makeLi(activePage + 1, '»', activePage === totalP));
+    }
+
+    // Chuyển trang
+    function changePage(p) {
+      if (p < 1 || p > totalPages) return;
+      fetchBookings(p);
+    }
+
+    // Xử lý duyệt hủy
+    async function approveCancel(id) {
+      try {
+        await callApi(`/${id}/approve-cancel`, 'POST');
+        alert('Duyệt yêu cầu hủy thành công');
+        fetchBookings(currentPage);
+      } catch (err) {
+        alert('Duyệt yêu cầu hủy thất bại');
+      }
+    }
+
+    // Xử lý từ chối hủy
+    async function rejectCancel(id) {
+      try {
+        await callApi(`/${id}/reject-cancel`, 'POST');
+        alert('Từ chối yêu cầu hủy thành công');
+        fetchBookings(currentPage);
+      } catch (err) {
+        alert('Từ chối yêu cầu hủy thất bại');
+      }
+    }
+
+    // Khởi tạo
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchBookings(1);
+      document.querySelector('#agree .btn-success').onclick = () => {
+        const id = document.querySelector('#agree .btn-success').dataset.id;
+        if (id) approveCancel(id);
+        bootstrap.Modal.getInstance(document.getElementById('agree')).hide();
+      };
+      document.querySelector('#noagree .btn-danger').onclick = () => {
+        const id = document.querySelector('#noagree .btn-danger').dataset.id;
+        if (id) rejectCancel(id);
+        bootstrap.Modal.getInstance(document.getElementById('noagree')).hide();
+      };
+    });
+  </script>
+</body>
+</html>
